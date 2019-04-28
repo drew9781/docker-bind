@@ -1,0 +1,21 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	3h
+@	IN	SOA	ns1.aenglema.com. admin.aenglema.com. (
+			      3		; Serial
+			 2h		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+
+
+;
+@	IN	NS	ns1.aenglema.com.
+@	IN	NS	ns2.aenglema.com.
+
+11		IN	PTR	ns1.aenglema.com.
+12		IN	PTR	ns2.aenglema.com.
+33		IN	PTR	pve.aenglema.com.
+44		IN	PTR	unifi.aenglema.com.
+
