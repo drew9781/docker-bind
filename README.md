@@ -12,7 +12,15 @@ docker build -t dns .
 ```
 
 ## Usage
+You need to mount the bind directory via a volume in order for this to work.  
+Because this container is meant to be clustered, it is built to work off a central DB. Think NFS via NAS.
 
 ```
 docker run --rm --name dns -d -p 53:53/tcp -p 53:53/udp -v /your/existing/bind/directory/bind:/etc/bind dns
 ```
+If you don't have an existing bind configuration, use the included default configuration and configure for yourself.
+Here is a handy guide on configuring bind by [Digital Ocean.](https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-18-04)
+
+# To-Do
+- add default bind config
+- add docker-compose file

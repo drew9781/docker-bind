@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER drew9781 <drew9781@yahoo.com>
+LABEL maintainer="drew9781@yahoo.com"
 
 RUN apt update && apt install -y bind9 dnsutils && apt clean && rm -r /etc/bind
 
