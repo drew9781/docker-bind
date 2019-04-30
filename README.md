@@ -23,5 +23,3 @@ Here is a handy guide on configuring bind by [Digital Ocean.](https://www.digita
 Make sure to rename your bind configuration directory to "bind" so that it will not be included. (.gitignore)
 
 # To-Do
-- add default bind config
-- add docker-compose file
