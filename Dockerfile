@@ -4,6 +4,6 @@ LABEL maintainer="drew9781@yahoo.com"
 
 RUN apt update && apt install -y bind9 dnsutils && apt clean && rm -r /etc/bind
 
-EXPOSE 53/udp 53/tcp
+EXPOSE 1053/udp 1053/tcp
 
 CMD ["/usr/sbin/named", "-f"]
